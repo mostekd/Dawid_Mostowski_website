@@ -16,3 +16,6 @@ window.addEventListener('scroll', function() {
         mainSection.style.color = "#d3d3d3";
     }
 });
+document.querySelector('.download-cv').addEventListener('click', function() {
+    alert('Pobieranie CV zostało rozpoczęte.');
+});

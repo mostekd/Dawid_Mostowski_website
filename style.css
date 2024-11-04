@@ -100,3 +100,21 @@ body {
     background-color: #0d0d0d;
     color: #51ca52;
 }
+
+.download-cv {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #0d0d0d;
+    background-color: #51ca52;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.download-cv:hover {
+    background-color: #8be88a;
+    color: #0d0d0d;
+}

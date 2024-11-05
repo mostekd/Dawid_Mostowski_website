@@ -7,33 +7,34 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
     background-color: #0d0d0d;
     color: #51ca52;
 }
 
-/* Stylizacja sekcji */
 .left, .right, .main {
     padding: 20px;
-}
-
-.left, .right {
-    background-color: #1a1a1a;
-    padding: 20px;
-    border: 2px solid #51ca52;
 }
 
 .left {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-right: 2px solid #51ca52;
 }
 
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.link {
+    margin: 10px 0;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: #8be88a;
 }
 
 .main {
@@ -42,7 +43,6 @@ body {
     padding: 50px;
 }
 
-/* Elementy tekstowe */
 .main h1 {
     font-size: 3em;
     color: #51ca52;
@@ -76,6 +76,31 @@ body {
     border-left: 2px solid #51ca52;
 }
 
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-left: 2px solid #51ca52;
+}
+
+.right img {
+    max-width: 150px;
+    border-radius: 50%;
+    border: 2px solid #51ca52;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #0d0d0d;
+    color: #51ca52;
+}
+
 .download-cv {
     display: inline-block;
     margin-top: 20px;
@@ -92,66 +117,4 @@ body {
 .download-cv:hover {
     background-color: #8be88a;
     color: #0d0d0d;
-}
-
-.link {
-    margin: 10px 0;
-    font-size: 24px;
-    transition: color 0.3s ease;
-}
-
-.link:hover {
-    color: #8be88a;
-}
-
-/* Stylizacja obrazu */
-.right img {
-    max-width: 150px;
-    border-radius: 50%;
-    border: 2px solid #51ca52;
-}
-
-/* Ustawienia dla większych ekranów */
-@media (min-width: 768px) {
-    body {
-        flex-direction: row;
-        height: 100vh;
-    }
-    .left, .right {
-        width: 20%;
-    }
-    .main {
-        width: 60%;
-    }
-}
-
-/* Ustawienia dla tabletów i mniejszych ekranów */
-@media (max-width: 767px) {
-    .main h1 {
-        font-size: 2em;
-    }
-    .main h2 {
-        font-size: 1.5em;
-    }
-    .main p, .main ul li {
-        font-size: 1em;
-    }
-    .right img {
-        max-width: 100px;
-    }
-}
-
-/* Ustawienia dla małych urządzeń mobilnych */
-@media (max-width: 480px) {
-    .left, .right {
-        width: 100%;
-        padding: 10px;
-    }
-    .main {
-        padding: 20px;
-    }
-    .download-cv {
-        padding: 8px 16px;
-        font-size: 1em;
-    }
 }
